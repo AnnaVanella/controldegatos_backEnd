@@ -68,7 +68,8 @@
     "profile": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::profile.profile"
+      "target": "api::profile.profile",
+      "inversedBy": "user"
     },
     "viajes": {
       "type": "relation",
