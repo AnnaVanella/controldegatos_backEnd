@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "profiles",
+  "collectionName": "viajes",
   "info": {
-    "singularName": "profile",
-    "pluralName": "profiles",
-    "displayName": "profile",
-    "description": ""
+    "singularName": "viaje",
+    "pluralName": "viajes",
+    "displayName": "Viaje"
   },
   "options": {
     "draftAndPublish": true
@@ -16,16 +15,7 @@
     }
   },
   "attributes": {
-    "direccion": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "text",
-      "required": true
-    },
-    "nombre_apellidos": {
+    "destino": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -34,22 +24,37 @@
       "type": "string",
       "required": true
     },
-    "num_contacto": {
+    "fecha_viaje": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "string"
-    },
-    "fecha_nac": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string",
+      "type": "date",
       "required": true
+    },
+    "fecha_regreso": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "date",
+      "required": true
+    },
+    "presupuesto": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "decimal"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "viajes"
     }
   }
 }

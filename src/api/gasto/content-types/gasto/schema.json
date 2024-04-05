@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "profiles",
+  "collectionName": "gastos",
   "info": {
-    "singularName": "profile",
-    "pluralName": "profiles",
-    "displayName": "profile",
+    "singularName": "gasto",
+    "pluralName": "gastos",
+    "displayName": "gasto",
     "description": ""
   },
   "options": {
@@ -16,16 +16,7 @@
     }
   },
   "attributes": {
-    "direccion": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "text",
-      "required": true
-    },
-    "nombre_apellidos": {
+    "nombre": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -34,22 +25,22 @@
       "type": "string",
       "required": true
     },
-    "num_contacto": {
+    "monto": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
+    "hora": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
       "type": "string"
-    },
-    "fecha_nac": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string",
-      "required": true
     }
   }
 }
